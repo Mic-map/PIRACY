@@ -1,0 +1,2 @@
+Download the pre-trained FIX classifier and nifti files following the link and place them under the path "your_path/PIRACY/libs".
+https://www.dropbox.com/sh/rv6tx0khyo7fpwf/AAAr1YG14EjdvPRs3KR7nejua?dl=0
