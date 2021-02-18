@@ -12,9 +12,9 @@ if __name__ == "__main__":
     parser.add_argument("--epiPrefix",  default='task-rest_acq-EPI', type=str, required=False)
     parser.add_argument("--epiSuffix",  default='bold.nii.gz', type=str, required=False)
     parser.add_argument("--anatSuffix",  default='acq-FSEMS.nii.gz', type=str, required=False)
-
     args = parser.parse_args()
-    #Setup parameters
+
+    #Setup the parameters for 1 subject
     args.datapath = '/piracy_test'
     args.subject = 'CTL3693'
     args.ses = 1
