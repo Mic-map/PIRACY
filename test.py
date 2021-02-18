@@ -14,7 +14,7 @@ if __name__ == "__main__":
     parser.add_argument("--anatSuffix",  default='acq-FSEMS.nii.gz', type=str, required=False)
 
     args = parser.parse_args()
-
+    #Setup parameters
     args.datapath = '/piracy_test'
     args.subject = 'CTL3693'
     args.ses = 1
@@ -43,7 +43,8 @@ if __name__ == "__main__":
             myPiracy.fmri_ICA(components=40, ndelete=10)
 	    myPiracy.fix_classify(thresholds=[20, 70])
 			
-	    ###FIX cleaning. Manually create the noise file "fix_noise_file.txt" before proceeding.###
+	    ### FIX cleaning. 
+	    ### Please manually create the noise file "fix_noise_file.txt" based on the auto-classifications of the 2 thresholds before proceeding.
 	    # #myPiracy.fmri_procs_done(['px', 'dn', 'topup', 'tm', 'spm', 'clean']) #specify steps have been done
 	    #myPiracy.fix_clean("fix_noise_file.txt")
             #myPiracy.create_connectome()    
