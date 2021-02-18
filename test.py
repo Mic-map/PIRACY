@@ -45,6 +45,6 @@ if __name__ == "__main__":
 			
 	    ### FIX cleaning. 
 	    ### Please manually create the noise file "fix_noise_file.txt" based on the auto-classifications of the 2 thresholds before proceeding.
-	    # #myPiracy.fmri_procs_done(['px', 'dn', 'topup', 'tm', 'spm', 'clean']) #specify steps have been done
+	    #myPiracy.fmri_procs_done(['px', 'dn', 'topup', 'tm', 'spm']) #specify steps have been done
 	    #myPiracy.fix_clean("fix_noise_file.txt")
             #myPiracy.create_connectome()    
