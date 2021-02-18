@@ -22,23 +22,28 @@ if __name__ == "__main__":
 
     print("-----------------------------------------------------------")
     myPiracy = PIRACY(args.datapath, args.subject, args.ses, args.run)
+	#over timepoints (ses)
     for ses in [1,2,3]:
         myPiracy.set_ses(ses)
-        #myPiracy.anat_scale_pixdim_x10()
-        #myPiracy.anat_brain_masking()
+        myPiracy.anat_scale_pixdim_x10()
+        myPiracy.anat_brain_masking()
         #myPiracy.get_anat_brain_and_mask()
-        #myPiracy.anat_reg_to_atlas()
-
+        myPiracy.anat_reg_to_atlas()
+		
+		#over runs
         for run in [1,2]:
             myPiracy.set_run(run)
             myPiracy.fmri_scale_pixdim_x10()
-            
-            # myPiracy.fmri_loose_mask()
-            # myPiracy.fmri_mpdenoising()
-            # myPiracy.fmri_topup()
-            # #myPiracy.fmri_procs_done(['px', 'dn', 'topup', 'tm', 'spm', 'clean'])
-            # myPiracy.fmri_tight_mask()
-            # myPiracy.fmri_reg_to_anat()
-            # myPiracy.fmri_slicetiming_correction_spatial_smoothing()
-            # myPiracy.fmri_ICA(components=50, ndelete=5)
-            # #myPiracy.create_connectome()
+            myPiracy.fmri_loose_mask()
+            myPiracy.fmri_mpdenoising()
+            myPiracy.fmri_topup()
+            myPiracy.fmri_tight_mask()
+            myPiracy.fmri_reg_to_anat()
+            myPiracy.fmri_slicetiming_correction_spatial_smoothing()
+            myPiracy.fmri_ICA(components=40, ndelete=10)
+			myPiracy.fix_classify(thresholds=[20, 70])
+			
+			###FIX cleaning. Manually create the noise file "fix_noise_file.txt" before proceeding.###
+			# #myPiracy.fmri_procs_done(['px', 'dn', 'topup', 'tm', 'spm', 'clean']) #specify steps have been done
+			#myPiracy.fix_clean("fix_noise_file.txt")
+            #myPiracy.create_connectome()    
