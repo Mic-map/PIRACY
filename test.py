@@ -41,9 +41,9 @@ if __name__ == "__main__":
             myPiracy.fmri_reg_to_anat()
             myPiracy.fmri_slicetiming_correction_spatial_smoothing()
             myPiracy.fmri_ICA(components=40, ndelete=10)
-			myPiracy.fix_classify(thresholds=[20, 70])
+	    myPiracy.fix_classify(thresholds=[20, 70])
 			
-			###FIX cleaning. Manually create the noise file "fix_noise_file.txt" before proceeding.###
-			# #myPiracy.fmri_procs_done(['px', 'dn', 'topup', 'tm', 'spm', 'clean']) #specify steps have been done
-			#myPiracy.fix_clean("fix_noise_file.txt")
+	    ###FIX cleaning. Manually create the noise file "fix_noise_file.txt" before proceeding.###
+	    # #myPiracy.fmri_procs_done(['px', 'dn', 'topup', 'tm', 'spm', 'clean']) #specify steps have been done
+	    #myPiracy.fix_clean("fix_noise_file.txt")
             #myPiracy.create_connectome()    
