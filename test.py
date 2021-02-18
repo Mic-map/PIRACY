@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     print("-----------------------------------------------------------")
     myPiracy = PIRACY(args.datapath, args.subject, args.ses, args.run)
-	#over timepoints (ses)
+    #over timepoints (ses)
     for ses in [1,2,3]:
         myPiracy.set_ses(ses)
         myPiracy.anat_scale_pixdim_x10()
@@ -30,7 +30,7 @@ if __name__ == "__main__":
         #myPiracy.get_anat_brain_and_mask()
         myPiracy.anat_reg_to_atlas()
 		
-		#over runs
+	#over runs
         for run in [1,2]:
             myPiracy.set_run(run)
             myPiracy.fmri_scale_pixdim_x10()
