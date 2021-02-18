@@ -18,13 +18,13 @@ if __name__ == "__main__":
 
     print("-----------------------------------------------------------")
     myPiracy = PIRACY(args.datapath, args.subject, args.ses, args.run)
-    #anat
-    myPiracy.anat_scale_pixdim_x10()
-    myPiracy.anat_brain_masking()
-    myPiracy.anat_reg_to_atlas()
-    #fMRI
     ##1. Preprocessing
     if args.step == 'preprocessing':
+        #anat
+        myPiracy.anat_scale_pixdim_x10()
+        myPiracy.anat_brain_masking()
+        myPiracy.anat_reg_to_atlas()
+        #fMRI
         myPiracy.fmri_scale_pixdim_x10()    
         myPiracy.fmri_loose_mask()
         myPiracy.fmri_mpdenoising()
@@ -36,9 +36,11 @@ if __name__ == "__main__":
         myPiracy.fix_classify(thresholds=[20, 70])
     ##2. FIX cleaning. Manually create the noise file "fix_noise_file.txt" before proceeding.
     elif args.step == 'cleaning':
+        myPiracy.fmri_procs_done(['px', 'dn', 'topup', 'tm', 'spm'])
         myPiracy.fix_clean("fix_noise_file.txt")
     ##3. FC generation
     elif args.step == 'connectome':
+        myPiracy.fmri_procs_done(['px', 'dn', 'topup', 'tm', 'spm', 'clean'])
         myPiracy.create_connectome(gsr=True)
     else:
         print("Please choose 'step' from options: 'preprocessing', 'cleaning' and 'connectome'")
