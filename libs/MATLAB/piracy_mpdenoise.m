@@ -1,6 +1,4 @@
-%% by Yujian Diao, Denoise for fMRI data
-% run on linux server, called by python
-% Modified script from Ileana Jelescu 'rs_fmri_MPdenoising.m'
+
 % 'MPdenoising.m by Jelle Veraart
 % https://github.com/NYU-DiffusionMRI/mppca_denoise/blob/master/MPdenoising.m
 
