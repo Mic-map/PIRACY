@@ -1,17 +1,5 @@
-%% Slice time correction on topup corrected, brain extracted images
-% 1) Load nifti fMRI data (xxx_dn_mc.nii or xxx_MP)
-% 2) Slice timing correction: spm_slice_timing.m
-%% changes, smoothing kernel = 0.5 in throgh plane direction
-% TR is always 1.6seconds -- 0.8s means two shots EPI
-% TA -- acquisition time, TA = TR - TR/num_Slice
-% sliceOrder -- Interleaved Ascending [ 1 3 5 7 9 2 4 6 8]
-% Reference slice -- 1st slice
-% timing: [time between slices, time between last slice and next volume]
-% smooth.fwhm = [0.36 0.36 1/2]*10 -- smooth kernel, no smoothing through slices
-% smooth.im = 0 -- no Implicit masking
-% prefix: output file starts with 'a' for STC, 'sa' for smoothing
-%% access path with data
-function ret_name = piracy_spm(dataDir,  file_name_gz, suffix)%prefix_stc, prefix_sm
+
+function ret_name = piracy_spm(dataDir,  file_name_gz, suffix)
     cd(dataDir);
 
     disp(['Pre-process for (', file_name_gz, ')']);
