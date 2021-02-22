@@ -1,7 +1,4 @@
 
-% 'MPdenoising.m by Jelle Veraart
-% https://github.com/NYU-DiffusionMRI/mppca_denoise/blob/master/MPdenoising.m
-
 %%
 function ret_niis = piracy_mpdenoise(dataDir, fmri_nii, fmri_revPE_nii, fmri_mask, suffix, saveAll)
     %
