@@ -16,4 +16,6 @@ PIRACY is modular and can easily be tuned to study-specific needs or requirement
 In order to enable FIX ICA auto-classification, specific configuration is required. Please refer to FIX's userguide for details (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIX/UserGuide). 
 
 # Recommended Usage
+It is recommended to run PIRACY in a python script following the example in "test.py". However, it is also possible to run in a command line, e.g,
+    python3 /yourpath/PIRACY/main.py --step='preprocessing' --datapath=/your/data/path --subject='CTL3693' --ses=1 --run=1
 
