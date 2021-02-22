@@ -1,5 +1,5 @@
-%build functional connectome
 function [rho_fc] = piracy_make_connectome(datapath, fmri_name, label_file, output_folder, ifGSR)
+    %build functional connectome between ROIs specified by ROI_labels
     %ifGSR==1: partial correlation with global mean signal as 3rd regressor
     %ifGSR==0: plain pearson's correlation
 
