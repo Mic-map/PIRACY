@@ -22,6 +22,7 @@ Front. Neurosci. 15, (2021). (https://doi.org/10.3389/fnins.2021.602170)
 # Recommended Usage
 It is recommended to run PIRACY in a python script following the example in "test.py" although it is possible to run in a command line, e.g,
     python3 /yourpath/PIRACY/main.py --step='preprocessing' --datapath=/your/data/path --subject='CTL3693' --ses=1 --run=1
+    
 We assume the data is named and stored as the following way:
 
 ![image](https://user-images.githubusercontent.com/38806138/114040456-ed0b2380-9883-11eb-9700-bc804ba1fe95.png)
