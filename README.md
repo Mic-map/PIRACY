@@ -15,6 +15,10 @@ PIRACY is modular and can easily be tuned to study-specific needs or requirement
 
 In order to enable FIX ICA auto-classification, specific configuration is required. Please refer to FIX's userguide for details (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FIX/UserGuide). 
 
+The PIRACY pipeline has been evaluated and described in more technical detail in following publication:
+Yujian Diao, Ting Yin, Rolf Gruetter and Ileana O Jelescu, PIRACY: An Optimized Pipeline for Functional Connectivity Analysis in the Rat Brain. 
+Front. Neurosci. 15, (2021). (https://doi.org/10.3389/fnins.2021.602170)
+
 # Recommended Usage
 It is recommended to run PIRACY in a python script following the example in "test.py" although it is possible to run in a command line, e.g,
     python3 /yourpath/PIRACY/main.py --step='preprocessing' --datapath=/your/data/path --subject='CTL3693' --ses=1 --run=1
